@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrioriBuy — Belanja Lebih Bijak, Keuangan Lebih Baik</title>
+<meta name="description" content="PrioriBuy membantu kamu mengontrol pengeluaran dengan sistem skala prioritas sebelum membeli. Kurangi impulsive buying, kelola anggaran, capai tujuan keuangan.">
+<link rel="icon" type="image/png" href="assets/img/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>.reveal{opacity:1;transform:none;}</style></noscript>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-pb navbar-expand-lg" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/img/logo-horizontal.png" alt="PrioriBuy Logo" width="136" height="34">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Buka menu">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="fitur.html">Fitur</a></li>
+        <li class="nav-item"><a class="nav-link" href="cara-kerja.html">Cara Kerja</a></li>
+        <li class="nav-item"><a class="nav-link" href="premium.html">Premium</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a class="btn btn-pb-primary btn-pb-sm btn-nav-cta" href="https://drive.google.com/drive/folders/1Ci_4rXnQCx0uQhJHQwMpRNOG5PWsRauc" target="_blank" rel="noopener noreferrer">Coba Sekarang</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" >
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <div class="eyebrow eyebrow--blue reveal"><span class="dot"></span>Aplikasi Manajemen Keuangan</div>
+        <h1 class="reveal reveal-delay-1">Belanja Lebih Bijak dengan Sistem Skala Prioritas</h1>
+        <p class="lead-text reveal reveal-delay-2">Kelola pengeluaran, kurangi pembelian impulsif, dan capai tujuan keuanganmu dengan PrioriBuy — sebelum membeli, beri dulu setiap rencana belanja sebuah prioritas.</p>
+        <div class="d-flex flex-wrap gap-3 reveal reveal-delay-3">
+          <a href="https://drive.google.com/drive/folders/1Ci_4rXnQCx0uQhJHQwMpRNOG5PWsRauc" class="btn btn-pb-primary" target="_blank" rel="noopener noreferrer">Coba Sekarang</a>
+          <a href="fitur.html" class="btn btn-pb-outline">Lihat Fitur</a>
+        </div>
+
+        <div class="priority-demo mt-5 reveal reveal-delay-4">
+          <div class="demo-label">Coba logikanya — pilih prioritas</div>
+          <div class="priority-pills">
+            <button class="priority-pill active" data-level="tinggi">Tinggi</button>
+            <button class="priority-pill" data-level="sedang">Sedang</button>
+            <button class="priority-pill" data-level="rendah">Rendah</button>
+          </div>
+          <div class="priority-item-card">
+            <div class="icon-box" id="demoIcon"><i class="bi bi-bag-heart"></i></div>
+            <div>
+              <div class="item-title">Sepatu Lari Baru — Rp450.000</div>
+              <div class="item-note tinggi" id="demoNote">Sepatu lama sudah rusak, disarankan dibeli minggu ini.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="phone-wrap reveal reveal-delay-2">
+          <div class="float-badge badge-stat">
+            <div style="width:38px;height:38px;border-radius:10px;background:var(--green-bg);color:#2C7A53;display:flex;align-items:center;justify-content:center;font-size:1rem;"><i class="bi bi-piggy-bank-fill"></i></div>
+            <div>
+              <div style="font-size:0.7rem;color:var(--ink-faint);font-weight:600;">Hemat bulan ini</div>
+              <div style="font-weight:700; font-size:0.95rem;">Rp1.250.000</div>
+            </div>
+          </div>
+
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-statusbar"><span>09:41</span><span><i class="bi bi-reception-4"></i> <i class="bi bi-wifi"></i> <i class="bi bi-battery-full"></i></span></div>
+              <div class="phone-app-header">
+                <img src="assets/img/app-icon.png" alt="PrioriBuy">
+                <span>Dashboard</span>
+              </div>
+              <div class="mock-card">
+                <div style="font-size:0.72rem;color:var(--ink-faint);font-weight:600;margin-bottom:6px;">Pengeluaran Bulan Ini</div>
+                <div style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">Rp2.180.000</div>
+                <div class="mock-bar" style="width:62%;background:linear-gradient(90deg,#3E7BFA,#6C6CF5);"></div>
+              </div>
+              <div class="mock-card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                  <span style="font-weight:600;font-size:0.84rem;">Rencana Belanja</span>
+                  <span class="mock-chip chip-tinggi">Tinggi</span>
+                </div>
+                <div style="font-size:0.78rem;color:var(--ink-soft);">Buku Kuliah Semester 5</div>
+              </div>
+              <div class="mock-card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                  <span style="font-weight:600;font-size:0.84rem;">Rencana Belanja</span>
+                  <span class="mock-chip chip-rendah">Rendah</span>
+                </div>
+                <div style="font-size:0.78rem;color:var(--ink-soft);">Jaket Edisi Terbaru</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-badge badge-logo">
+            <img src="assets/img/logo-utama.png" alt="PrioriBuy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-pad" id="tentang-ringkas">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-7 container-narrow reveal">
+        <div class="eyebrow eyebrow--pink"><span class="dot"></span>Tentang PrioriBuy</div>
+        <h2 class="mb-3">Satu Kebiasaan Kecil yang Mengubah Cara Kamu Belanja</h2>
+        <p>PrioriBuy adalah aplikasi manajemen keuangan yang membantumu mengontrol pengeluaran dengan menerapkan sistem skala prioritas sebelum melakukan pembelian.</p>
+      </div>
+    </div>
+    <div class="solution-strip reveal">
+      <div class="check-icon"><i class="bi bi-check-lg"></i></div>
+      <div>
+        <h5 class="mb-1">PrioriBuy hadir sebagai solusinya</h5>
+        <p class="mb-0">Setiap rencana belanja diberi level prioritas — Tinggi, Sedang, atau Rendah — sehingga kamu mengambil keputusan pembelian yang lebih rasional dan keuanganmu lebih sehat serta terencana.</p>
+      </div>
+    </div>
+    <div class="text-center mt-4 reveal">
+      <a href="tentang.html" class="btn btn-pb-outline">Selengkapnya Tentang PrioriBuy</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="fitur-ringkas" style="background:#fff;">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-7 reveal">
+        <div class="eyebrow eyebrow--blue"><span class="dot"></span>Fitur Utama</div>
+        <h2 class="mb-3">Semua yang Kamu Butuhkan untuk Belanja Lebih Cerdas</h2>
+        <p>Dari rencana belanja sampai progres tabungan, semua terhubung dalam satu sistem prioritas yang sama.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="feature-card">
+          <div class="f-icon f-blue"><i class="bi bi-card-checklist"></i></div>
+          <h6>Daftar Rencana Pembelian</h6>
+          <p>Catat semua barang yang ingin dibeli sebelum benar-benar checkout.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="feature-card">
+          <div class="f-icon f-pink"><i class="bi bi-tags"></i></div>
+          <h6>Kategori Kebutuhan &amp; Keinginan</h6>
+          <p>Pisahkan secara jelas mana kebutuhan dan mana sekadar keinginan.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="feature-card">
+          <div class="f-icon f-green"><i class="bi bi-sliders"></i></div>
+          <h6>Skala Prioritas Tinggi/Sedang/Rendah</h6>
+          <p>Setiap rencana belanja diberi level prioritas sebelum dieksekusi.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-4">
+        <div class="feature-card">
+          <div class="f-icon f-blue"><i class="bi bi-cash-coin"></i></div>
+          <h6>Estimasi Harga Barang</h6>
+          <p>Perkirakan biaya sejak awal agar anggaran tetap terkendali.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="feature-card">
+          <div class="f-icon f-pink"><i class="bi bi-pencil-square"></i></div>
+          <h6>Catatan Alasan Pembelian</h6>
+          <p>Tuliskan alasanmu membeli, agar keputusan lebih dipertanggungjawabkan.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="feature-card">
+          <div class="f-icon f-green"><i class="bi bi-grid-1x2"></i></div>
+          <h6>Dashboard Ringkasan Pengeluaran</h6>
+          <p>Pantau kondisi keuangan dalam satu tampilan yang ringkas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5 d-flex flex-wrap justify-content-center gap-3 reveal">
+      <a href="fitur.html" class="btn btn-pb-primary">Lihat Semua Fitur</a>
+      <a href="cara-kerja.html" class="btn btn-pb-outline">Lihat Cara Kerja</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="preview" style="background:linear-gradient(180deg,#F3F8FF,#fff);">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-7 reveal">
+        <div class="eyebrow eyebrow--pink"><span class="dot"></span>Preview Aplikasi</div>
+        <h2 class="mb-3">Tampilan PrioriBuy dari Dalam</h2>
+        <p>Pastel, rapi, dan dirancang agar tidak membuatmu lelah membuka aplikasi keuangan setiap hari.</p>
+      </div>
+    </div>
+
+    <div class="preview-tabs reveal">
+      <button class="preview-tab-btn active" data-target="screen-dashboard">Dashboard</button>
+      <button class="preview-tab-btn" data-target="screen-daftar">Daftar Belanja</button>
+      <button class="preview-tab-btn" data-target="screen-statistik">Statistik</button>
+      <button class="preview-tab-btn" data-target="screen-riwayat">Riwayat</button>
+      <button class="preview-tab-btn" data-target="screen-konsultasi">Konsultasi Premium</button>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="phone reveal" style="margin-bottom:40px;">
+          <div class="phone-screen">
+
+            <div class="preview-screen active" id="screen-dashboard">
+              <div class="phone-statusbar"><span>09:41</span><span><i class="bi bi-wifi"></i></span></div>
+              <div class="phone-app-header"><img src="assets/img/app-icon.png" alt="icon"><span>Dashboard</span></div>
+              <div class="mock-card mb-2"><div style="font-size:0.72rem;color:var(--ink-faint);">Sisa Anggaran Bulan Ini</div><div style="font-size:1.25rem;font-weight:700;">Rp1.870.000</div><div class="mock-bar mt-2" style="width:71%;background:linear-gradient(90deg,#3FA873,#C8E6C9);"></div></div>
+              <div class="mock-card mb-2"><div style="display:flex;justify-content:space-between;"><span style="font-size:0.8rem;font-weight:600;">Target Tabungan</span><span style="font-size:0.78rem;color:var(--ink-faint);">62%</span></div><div class="mock-bar mt-2" style="width:62%;background:var(--blue);"></div></div>
+              <div class="mock-card"><div style="font-size:0.8rem;font-weight:600;margin-bottom:8px;">Prioritas Aktif</div><div class="d-flex gap-2 flex-wrap"><span class="mock-chip chip-tinggi">2 Tinggi</span><span class="mock-chip chip-sedang">3 Sedang</span><span class="mock-chip chip-rendah">1 Rendah</span></div></div>
+            </div>
+
+            <div class="preview-screen" id="screen-daftar">
+              <div class="phone-statusbar"><span>09:41</span><span><i class="bi bi-wifi"></i></span></div>
+              <div class="phone-app-header"><img src="assets/img/app-icon.png" alt="icon"><span>Daftar Belanja</span></div>
+              <div class="mock-card mb-2"><div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-weight:600;font-size:0.84rem;">Tas Kuliah Baru</span><span class="mock-chip chip-tinggi">Tinggi</span></div><div style="font-size:0.76rem;color:var(--ink-soft);margin-top:4px;">Estimasi Rp320.000 · Kebutuhan</div></div>
+              <div class="mock-card mb-2"><div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-weight:600;font-size:0.84rem;">Sneakers Baru</span><span class="mock-chip chip-rendah">Rendah</span></div><div style="font-size:0.76rem;color:var(--ink-soft);margin-top:4px;">Estimasi Rp750.000 · Keinginan</div></div>
+              <div class="mock-card"><div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-weight:600;font-size:0.84rem;">Paket Data Bulanan</span><span class="mock-chip chip-sedang">Sedang</span></div><div style="font-size:0.76rem;color:var(--ink-soft);margin-top:4px;">Estimasi Rp100.000 · Kebutuhan</div></div>
+            </div>
+
+            <div class="preview-screen" id="screen-statistik">
+              <div class="phone-statusbar"><span>09:41</span><span><i class="bi bi-wifi"></i></span></div>
+              <div class="phone-app-header"><img src="assets/img/app-icon.png" alt="icon"><span>Statistik</span></div>
+              <div class="mock-card">
+                <div style="font-size:0.78rem;font-weight:600;margin-bottom:10px;">Pengeluaran per Kategori</div>
+                <canvas id="miniChart" height="150"></canvas>
+              </div>
+              <div class="mock-card mt-2"><div style="font-size:0.78rem;color:var(--ink-soft);">Bulan ini kamu menahan <b style="color:#2C7A53;">4 keinginan</b> berkat sistem prioritas.</div></div>
+            </div>
+
+            <div class="preview-screen" id="screen-riwayat">
+              <div class="phone-statusbar"><span>09:41</span><span><i class="bi bi-wifi"></i></span></div>
+              <div class="phone-app-header"><img src="assets/img/app-icon.png" alt="icon"><span>Riwayat</span></div>
+              <div class="mock-card mb-2"><div style="display:flex;justify-content:space-between;"><span style="font-size:0.82rem;font-weight:600;">Sepatu Olahraga</span><span style="font-size:0.78rem;">Rp420.000</span></div><div style="font-size:0.72rem;color:var(--ink-faint);">Dibeli · 14 Jun 2026</div></div>
+              <div class="mock-card mb-2"><div style="display:flex;justify-content:space-between;"><span style="font-size:0.82rem;font-weight:600;">Voucher Game</span><span style="font-size:0.78rem;">Rp50.000</span></div><div style="font-size:0.72rem;color:var(--ink-faint);">Ditunda · 10 Jun 2026</div></div>
+              <div class="mock-card"><div style="display:flex;justify-content:space-between;"><span style="font-size:0.82rem;font-weight:600;">Buku Bacaan</span><span style="font-size:0.78rem;">Rp95.000</span></div><div style="font-size:0.72rem;color:var(--ink-faint);">Dibeli · 02 Jun 2026</div></div>
+            </div>
+
+            <div class="preview-screen" id="screen-konsultasi">
+              <div class="phone-statusbar"><span>09:41</span><span><i class="bi bi-wifi"></i></span></div>
+              <div class="phone-app-header"><img src="assets/img/app-icon.png" alt="icon"><span>Konsultasi</span></div>
+              <div class="mock-card mb-2" style="text-align:center;">
+                <i class="bi bi-person-video3" style="font-size:1.8rem;color:var(--blue);"></i>
+                <div style="font-weight:600;font-size:0.86rem;margin-top:8px;">Sesi dengan Konsultan Keuangan</div>
+                <div style="font-size:0.72rem;color:var(--ink-faint);">Hari ini, 16:00 — durasi 60 menit</div>
+              </div>
+              <div class="mock-card"><span class="mock-chip" style="background:var(--pink-pastel);color:#B23D78;">Slot Premium Tersisa: 1 sesi/hari</span></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-pad premium-section" style="background:#fff;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="row align-items-center g-0">
+          <div class="col-lg-7">
+            <div class="premium-card reveal">
+              <span class="badge-premium">PrioriBuy Premium</span>
+              <div class="price-tag mt-4">Rp49.000<span>/bulan</span></div>
+              <p class="mt-2 mb-0" style="color:#C9CFE8;">Pendampingan finansial personal untuk keputusan keuangan yang lebih besar.</p>
+              <ul class="premium-feature-list">
+                <li><i class="bi bi-check-circle-fill"></i><span>Konsultasi keuangan premium dengan ahli</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Maksimal 1 sesi konsultasi per hari, hingga 2 jam per sesi</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Analisis pola pengeluaran yang lebih mendalam</span></li>
+              </ul>
+              <a href="premium.html" class="btn btn-premium">Lihat PrioriBuy Premium</a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="text-center px-4 reveal reveal-delay-2">
+              <i class="bi bi-headset" style="font-size:5rem;color:var(--blue-pastel);"></i>
+              <h5 class="mt-4">Butuh Arahan, Bukan Sekadar Catatan?</h5>
+              <p class="px-3">Fitur gratis membantumu mencatat. Premium membantumu memutuskan — dengan pendampingan langsung dari ahli keuangan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="testimoni" style="background:#fff;">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-7 reveal">
+        <div class="eyebrow eyebrow--green"><span class="dot"></span>Cerita Pengguna</div>
+        <h2 class="mb-3">Kebiasaan Belanja yang Lebih Sehat, Bukan Cuma Promosi</h2>
+        <p>Ilustrasi pengalaman pengguna saat menerapkan sistem skala prioritas PrioriBuy.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal reveal-delay-1">
+        <div class="testi-card">
+          <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p>"Sejak pakai PrioriBuy, saya jadi mikir dua kali sebelum checkout. Belanja yang nggak penting otomatis kelihatan kalau ditandai prioritas rendah."</p>
+          <div class="testi-author">
+            <div class="avatar" style="background:var(--blue);">DA</div>
+            <div><div class="name">Dinda A.</div><div class="role">Mahasiswa</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal reveal-delay-2">
+        <div class="testi-card">
+          <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p>"Fitur riwayat belanjanya membantu saya melihat pola pengeluaran tiap bulan. Ternyata banyak juga keinginan kecil yang ternyata bisa ditunda."</p>
+          <div class="testi-author">
+            <div class="avatar" style="background:var(--pink);">RP</div>
+            <div><div class="name">Reza P.</div><div class="role">Karyawan Swasta</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal reveal-delay-3">
+        <div class="testi-card">
+          <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+          <p>"Sebagai ibu rumah tangga, anggaran bulanan jadi lebih rapi. Saya bisa langsung lihat mana kebutuhan rumah yang harus didahulukan."</p>
+          <div class="testi-author">
+            <div class="avatar" style="background:var(--green);">SM</div>
+            <div><div class="name">Sri M.</div><div class="role">Ibu Rumah Tangga</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-pad" style="background:#fff;">
+  <div class="container">
+    <div class="cta-final reveal">
+      <h2 class="mb-3">Mulai Kelola Keuangan dengan Lebih Cerdas</h2>
+      <p>Bangun kebiasaan keuangan yang lebih sehat bersama PrioriBuy — satu prioritas dalam satu waktu.</p>
+      <a href="https://drive.google.com/drive/folders/1Ci_4rXnQCx0uQhJHQwMpRNOG5PWsRauc" class="btn btn-cta-white" target="_blank" rel="noopener noreferrer">Coba PrioriBuy Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontak-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <img src="assets/img/logo-utama.png" alt="PrioriBuy" class="footer-logo" width="42" height="42">
+        <p class="tagline">"Belanja Lebih Bijak, Keuangan Lebih Baik" — aplikasi manajemen keuangan dengan sistem skala prioritas.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Navigasi</h6>
+        <a class="footer-link" href="index.html">Beranda</a>
+        <a class="footer-link" href="tentang.html">Tentang</a>
+        <a class="footer-link" href="fitur.html">Fitur</a>
+        <a class="footer-link" href="premium.html">Premium</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Lainnya</h6>
+        <a class="footer-link" href="cara-kerja.html">Cara Kerja</a>
+        <a class="footer-link" href="faq.html">FAQ</a>
+        <a class="footer-link" href="kontak.html">Kontak</a>
+        <a class="footer-link" href="download.html">Download</a>
+      </div>
+      <div class="col-lg-4">
+        <h6>Kontak</h6>
+        <a class="footer-link" href="mailto:halo@pribuy.app"><i class="bi bi-envelope me-2"></i>halo@pribuy.app</a>
+        <a class="footer-link" href="https://www.youtube.com/@Prioribuy" target="_blank" rel="noopener"><i class="bi bi-youtube me-2"></i>youtube.com/@Prioribuy</a>
+        <a class="footer-link" href="https://www.instagram.com/prioribuy?igsh=MWo1Mmgzc2o4c3d4cQ==" target="_blank" rel="noopener"><i class="bi bi-instagram me-2"></i>@prioribuy</a>
+        <a class="footer-link" href="https://www.facebook.com/share/1BsDWXocPM/" target="_blank" rel="noopener"><i class="bi bi-facebook me-2"></i>facebook.com/prioribuy</a>
+        <a class="footer-link" href="https://www.tiktok.com/@prioribuy" target="_blank" rel="noopener"><i class="bi bi-tiktok me-2"></i>tiktok.com/@prioribuy</a>
+        <div class="mt-3">
+          <a href="https://www.youtube.com/@Prioribuy" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/prioribuy?igsh=MWo1Mmgzc2o4c3d4cQ==" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1BsDWXocPM/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.tiktok.com/@prioribuy" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex flex-wrap justify-content-between gap-2">
+      <span class="copyright">© 2026 PrioriBuy. Be Smart Buy.</span>
+      <span class="copyright">Dibuat untuk keperluan portofolio &amp; akademik.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
