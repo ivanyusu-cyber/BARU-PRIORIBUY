@@ -44,25 +44,41 @@
     });
   });
 
-  /* Beranda: demo prioritas di hero */
+  /* Beranda: demo prioritas di hero (skenario perlengkapan sekolah) */
   var demoData = {
-    tinggi:{icon:'bi-bag-heart', note:'Sepatu lama sudah rusak, disarankan dibeli minggu ini.'},
-    sedang:{icon:'bi-hourglass-split', note:'Masih layak dipakai, tunggu sampai gajian berikutnya.'},
-    rendah:{icon:'bi-pause-circle', note:'Tunda dulu, evaluasi ulang bulan depan sebelum membeli.'}
+    tinggi:{icon:'bi-person-badge', label:'Prioritas Tinggi', name:'Seragam baru sekolah', price:900000,
+            note:'Kebutuhan sekolah yang mendesak, jadi layak didahulukan.'},
+    sedang:{icon:'bi-pencil', label:'Prioritas Sedang', name:'Alat tulis sekolah', price:100000,
+            note:'Dibutuhkan, tetapi bisa dibeli bertahap sesuai kebutuhan.'},
+    rendah:{icon:'bi-bag-heart', label:'Prioritas Rendah', name:'Sepatu baru Nike', price:2400000,
+            note:'Lebih ke keinginan dan bisa ditunda; sepatu lama masih layak pakai.'}
   };
+  function formatRupiah(n){ return 'Rp' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+  var demoCard = document.querySelector('.priority-item-card');
+  function renderDemo(lvl){
+    var d = demoData[lvl];
+    if (!d || !demoCard) return;
+    var iconBox = document.getElementById('demoIcon');
+    var chip = document.getElementById('demoChip');
+    var title = document.getElementById('demoTitle');
+    var price = document.getElementById('demoPrice');
+    var note = document.getElementById('demoNote');
+    demoCard.dataset.level = lvl;
+    if (iconBox) iconBox.innerHTML = '<i class="bi ' + d.icon + '"></i>';
+    if (chip){ chip.textContent = d.label; chip.className = 'mock-chip chip-' + lvl; }
+    if (title) title.textContent = d.name;
+    if (price) price.textContent = formatRupiah(d.price);
+    if (note){ note.textContent = d.note; note.className = 'item-note ' + lvl; }
+  }
   document.querySelectorAll('.priority-pill').forEach(function(btn){
     btn.addEventListener('click', function(){
-      document.querySelectorAll('.priority-pill').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.priority-pill').forEach(function(b){
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
-      var lvl = btn.dataset.level, d = demoData[lvl];
-      var iconBox = document.getElementById('demoIcon');
-      var note = document.getElementById('demoNote');
-      if (!d || !iconBox || !note) return;
-      iconBox.innerHTML = '<i class="bi ' + d.icon + '"></i>';
-      note.textContent = d.note;
-      note.className = 'item-note ' + lvl;
-      iconBox.style.background = lvl==='tinggi' ? 'var(--pink-bg)' : lvl==='sedang' ? 'var(--blue-bg)' : 'var(--green-bg)';
-      iconBox.style.color = lvl==='tinggi' ? 'var(--pink)' : lvl==='sedang' ? 'var(--blue)' : 'var(--green)';
+      btn.setAttribute('aria-pressed', 'true');
+      renderDemo(btn.dataset.level);
     });
   });
 

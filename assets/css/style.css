@@ -161,6 +161,26 @@ section{position:relative;}
 .hero-social .avatars span:first-child{margin-left:0;}
 .hero-social small{color:var(--ink-soft); font-size:0.82rem;}
 
+/* hero beranda — teks kiri, demo prioritas kanan */
+.hero.hero--home{
+  --pb-blue:#4b82ff; --pb-blue-deep:#0f56f7; --pb-sky:#ebfaff; --pb-gold:#fec600;
+  padding:150px 0 88px;
+  background:linear-gradient(180deg,var(--pb-sky) 0%, #fff 100%);
+}
+.hero--home::before,.hero--home::after{display:none;}
+.hero--home .container{position:relative; z-index:1;}
+.hero--home .eyebrow--blue{background:#fff; color:var(--pb-blue-deep); box-shadow:inset 0 0 0 1px rgba(75,130,255,0.25);}
+.hero--home .eyebrow--blue .dot{background:var(--pb-gold);}
+.hero--home h1{font-size:clamp(1.85rem, 3.3vw, 2.65rem); line-height:1.22; max-width:22em; margin-bottom:18px;}
+.hero--home .hero-accent{color:var(--pb-blue-deep); background:linear-gradient(transparent 82%, var(--pb-gold) 82%);}
+.hero--home .lead-text{font-size:1.1rem; max-width:34em; margin-bottom:28px;}
+.hero--home .btn-pb-primary{background:var(--pb-blue-deep); box-shadow:0 10px 24px rgba(15,86,247,0.28);}
+.hero--home .priority-demo{max-width:460px; margin-left:auto; border-color:rgba(75,130,255,0.18); box-shadow:var(--shadow-md);}
+@media (max-width:991px){
+  .hero.hero--home{padding:120px 0 64px;}
+  .hero--home .priority-demo{margin-left:0; max-width:520px;}
+}
+
 /* priority demo widget (signature, interactive) */
 .priority-demo{
   background:#fff; border-radius:var(--radius-md); padding:20px 22px;
@@ -184,14 +204,22 @@ section{position:relative;}
   width:46px; height:46px; border-radius:14px; display:flex; align-items:center; justify-content:center;
   font-size:1.2rem; flex-shrink:0; transition:all .3s var(--ease);
 }
+.priority-item-card .item-body{min-width:0;}
+.priority-item-card .mock-chip{margin-bottom:6px;}
 .priority-item-card .item-title{font-weight:600; font-size:0.94rem; color:var(--ink); margin-bottom:2px;}
+.priority-item-card .item-price{font-weight:700; font-size:1.05rem; color:var(--ink); margin-bottom:4px;}
+.priority-item-card[data-level="tinggi"] .icon-box{background:var(--pink-bg); color:var(--pink);}
+.priority-item-card[data-level="sedang"] .icon-box{background:var(--blue-bg); color:var(--blue);}
+.priority-item-card[data-level="rendah"] .icon-box{background:var(--green-bg); color:var(--green);}
+.priority-demo .demo-disclaimer{font-size:0.76rem; color:var(--ink-faint); margin:12px 0 0; line-height:1.5;}
+.priority-pill:focus-visible,.priority-pill:hover{border-color:var(--blue);}
+.priority-pill:focus-visible{outline:3px solid rgba(75,130,255,0.35); outline-offset:2px;}
 .priority-item-card .item-note{font-size:0.8rem; color:var(--ink-soft); transition:color .3s var(--ease);}
 .priority-item-card .item-note.tinggi{color:#B23D78;}
 .priority-item-card .item-note.sedang{color:var(--blue-deep);}
 .priority-item-card .item-note.rendah{color:#2C7A53;}
 
 /* phone mockup */
-.phone-wrap{position:relative;}
 .phone{
   width:280px; margin:0 auto; background:#0F1830; border-radius:42px; padding:14px;
   box-shadow:var(--shadow-lg); position:relative; z-index:2;
@@ -211,20 +239,6 @@ section{position:relative;}
 .chip-tinggi{background:var(--pink-pastel); color:#B23D78;}
 .chip-sedang{background:var(--blue-pastel); color:var(--blue-deep);}
 .chip-rendah{background:var(--green-pastel); color:#2C7A53;}
-
-.float-badge{
-  position:absolute; background:#fff; border-radius:18px; padding:12px 16px;
-  box-shadow:var(--shadow-md); display:flex; align-items:center; gap:10px; z-index:3;
-  animation:floaty 5s ease-in-out infinite;
-}
-.float-badge.badge-stat{top:6%; right:-6%;}
-.float-badge.badge-logo{bottom:4%; left:-10%; padding:10px; border-radius:50%;}
-.float-badge.badge-logo img{width:46px; height:46px; display:block;}
-@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-@media (max-width:991px){
-  .float-badge.badge-stat{right:2%;}
-  .float-badge.badge-logo{left:0%;}
-}
 
 /* ============================================================
    TENTANG / MASALAH
@@ -263,7 +277,7 @@ section{position:relative;}
   width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center;
   font-size:1.25rem; margin-bottom:16px;
 }
-.feature-card h6{font-weight:600; font-size:0.98rem; margin-bottom:6px;}
+.feature-card h6{font-weight:600; font-size:1rem; line-height:1.35; margin-bottom:8px;}
 .feature-card p{font-size:0.85rem; margin:0;}
 .f-blue{background:var(--blue-bg); color:var(--blue-deep);}
 .f-green{background:var(--green-bg); color:#2C7A53;}
